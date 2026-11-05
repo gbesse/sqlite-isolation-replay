@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlite-isolation-replay"
+version = "0.1.0a1"
+description = "FR: Rejouer lectures et écritures concurrentes WAL SQLite | EN: Replay concurrent SQLite WAL reads and writes | ES: Reproducir lecturas y escrituras concurrentes WAL SQLite"
+requires-python = ">=3.11"
+license = "MIT"
+
+[project.scripts]
+sqlite-isolation-replay = "sqlite_isolation_replay.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["sqlite_isolation_replay*"]
